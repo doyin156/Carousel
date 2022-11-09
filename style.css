@@ -1,0 +1,97 @@
+* {
+    box-sizing:border-box
+}
+
+
+
+.slide_container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+.container_main .image_container,
+.container_main .card_visible {
+  display: none;
+}
+
+.container_main .card_visible {
+  display: block;
+}
+
+
+img{
+    width: 700px;
+    height: 500px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  opacity: 0;
+
+}
+
+.arrows{
+    display: none;
+  }
+  .slide_container:hover .arrows {
+    display: block;
+  }
+  
+
+ .next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  opacity: 1;
+} 
+ .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    opacity: 1;
+  }
+   
+.dot_tracker{
+  text-align: center;
+  margin-top: -70px;
+}
+
+.counter {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: black 0.6s ease;
+}
+.active, .counter:hover {
+  background-color: #f00d0d;
+}
+
+
+.card_visible{
+  animation-name: visibility;
+  animation-duration: 1.5s;
+}
+
+@keyframes visibility {
+  from {opacity: .4}
+  to {opacity: 1}
+}
